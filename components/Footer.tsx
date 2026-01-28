@@ -39,7 +39,7 @@ export default function Footer() {
               className="rounded-full object-cover"
             />
             <div className="hidden sm:block">
-              <h1 className="font-['Playfair_Display'] text-[1.75rem] leading-[1.8] tracking-[0.01em] text-[#333333]">श्री पद्मवैद्यम</h1>
+              <h1 className="font-['Playfair_Display'] text-[1.75rem] leading-[1.8] tracking-[0.01em] text-[#FFFFFF] p-5">श्री पद्मवैद्यम</h1>
             </div>
           </Link>
             <p className="font-['Open_Sans'] text-[1.125rem] tracking-[0.01em] font-normal text-[#FFFFFF]/80 leading-relaxed">
