@@ -118,21 +118,21 @@ const CURRICULUM_DATA: CurriculumItem[] = [
 const FACULTY_DATA: FacultyMember[] = [
   {
     id: 'f1',
-    name: 'Acharya Vishwas',
+    name: 'आचार्य विश्वास',
     role: 'वैदिक अध्ययन विभागाध्यक्ष',
     bio: 'वेदों और उपनिषदों के शिक्षण में 30 वर्ष से अधिक का अनुभव।',
     image: '/images/acharyavishwas.png'
   },
   {
     id: 'f2',
-    name: 'Dr. Sarah Sharma',
+    name: 'डॉ. सारा शर्मा',
     role: 'प्रधानाचार्य, आधुनिक विज्ञान',
     bio: 'भौतिकी में पीएचडी; विज्ञान और आध्यात्मिकता के समन्वय के लिए समर्पित।',
     image: '/images/sarahsharma.png'
   },
   {
     id: 'f3',
-    name: 'Pandit Ravi',
+    name: 'पंडित रवि कुमार',
     role: 'शास्त्रीय संगीत प्रशिक्षक',
     bio: 'संगीत विरासत को आगे बढ़ाने के लिए समर्पित प्रसिद्ध सितार मास्टर।',
     image: '/images/panditravi.png'
@@ -604,8 +604,7 @@ export default function HomePage() {
                   <div>
                     <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium mb-2">पता</h3>
                     <p className="text-[#333333]/70 leading-relaxed">
-                      Vedic Gurukul Campus, Near Ancient Shiva Temple,<br />
-                      Rishikesh Road, Haridwar, Uttarakhand - 249403
+                      493, सरस्वती नगर कॉलोनी, छित्तुपुर, वाराणसी-221005 (उत्तर प्रदेश), भारत
                     </p>
                   </div>
                 </div>
@@ -616,8 +615,8 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium mb-2">हमें मेल करें</h3>
-                    <p className="text-[#333333]/70">admissions@gurukul.edu.in</p>
-                    <p className="text-[#333333]/70">info@gurukul.edu.in</p>
+                    <p className="text-[#333333]/70">admissions@shreepadmavaidyam.com</p>
+                    <p className="text-[#333333]/70">info@shreepadmavaidyam.com</p>
                   </div>
                 </div>
 

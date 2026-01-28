@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const quickLinks = [
@@ -29,16 +30,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About Column */}
           <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-[#FF9933] rounded-full flex items-center justify-center">
-                <span className="text-[1.75rem] leading-[1.8] tracking-[0.01em] font-semibold text-[#FFFFFF] font-['Playfair_Display']">ॐ</span>
-              </div>
-              <div>
-                <h3 className="font-['Playfair_Display'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#FFFFFF]">Gurukul</h3>
-                <p className="font-['Open_Sans'] text-[1rem] leading-[1.5] tracking-[0.01em] font-normal text-[#FFFFFF]/70">ज्ञान और उत्कृष्टता</p>
-              </div>
+            <Link href="/" className="flex items-center space-x-3">
+            <Image 
+              src="/images/shreepadmavaidyam.jpg" 
+              alt="Shree Padma Vaidyam Logo" 
+              width={60}
+              height={60}
+              className="rounded-full object-cover"
+            />
+            <div className="hidden sm:block">
+              <h1 className="font-['Playfair_Display'] text-[1.75rem] leading-[1.8] tracking-[0.01em] text-[#333333]">श्री पद्मवैद्यम</h1>
             </div>
-            <p className="font-['Open_Sans'] text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#FFFFFF]/80 leading-relaxed">
+          </Link>
+            <p className="font-['Open_Sans'] text-[1.125rem] tracking-[0.01em] font-normal text-[#FFFFFF]/80 leading-relaxed">
               एक अध्ययन स्थल जहाँ शाश्वत वैदिक परंपराएँ समकालीन शैक्षिक उत्कृष्टता के साथ मिलती हैं।
             </p>
           </div>
@@ -59,7 +63,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Curriculum */}
           <div>
             <h4 className="font-['Playfair_Display'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#FFFFFF] mb-6">पाठ्यक्रम</h4>
@@ -84,7 +87,7 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" />
                 <span className="font-['Open_Sans'] text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#FFFFFF]/80">
-                  123 Gurukul Road, Spiritual Valley, Rishikesh, Uttarakhand 249201
+                  493, सरस्वती नगर कॉलोनी, छित्तुपुर, वाराणसी-221005 (उत्तर प्रदेश), भारत
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -102,12 +105,12 @@ export default function Footer() {
                   href="mailto:info@gurukul.edu"
                   className="font-['Open_Sans'] text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#FFFFFF]/80 hover:text-[#FF9933] transition-colors"
                 >
-                  info@gurukul.edu
+                  info@shreepadmavaidyam.com
                 </a>
               </li>
             </ul>
             <div className="mt-6">
-              <p className="font-['Open_Sans'] text-[1rem] leading-[1.5] tracking-[0.01em] font-normal text-[#FFFFFF]/70 mb-3">कार्यालय समय:</p>
+              <p className="font-['Open_Sans'] text-[1rem] tracking-[0.01em] font-normal text-[#FFFFFF]/70 mb-3">कार्यालय समय:</p>
               <p className="font-['Open_Sans'] text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#FFFFFF]/80">
                 सोम - शनि: 9:00 AM - 5:00 PM
               </p>
@@ -133,7 +136,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p className="font-['Open_Sans'] text-[1rem] leading-[1.5] tracking-[0.01em] font-normal text-[#FFFFFF]/70 text-center md:text-right">
+            <p className="font-['Open_Sans'] text-[1rem] leading-normal tracking-[0.01em] font-normal text-[#FFFFFF]/70 text-center md:text-right">
               © {new Date().getFullYear()} गुरुकुल। सर्वाधिकार सुरक्षित। | उत्कृष्टता के साथ वेबसाइट डिजाइन की गई
             </p>
           </div>

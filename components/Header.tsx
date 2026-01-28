@@ -37,8 +37,7 @@ export default function Header() {
               className="rounded-full object-cover"
             />
             <div className="hidden sm:block">
-              <h1 className="font-['Playfair_Display'] text-[1.75rem] leading-[1.8] tracking-[0.01em] text-[#333333]">श्री</h1>
-              <p className="font-['Open_Sans'] text-[0.875rem] leading-tight tracking-[0.02em] text-[#333333]/60">पद्म वैद्यम</p>
+              <h1 className="font-['Playfair_Display'] text-[1.75rem] leading-[1.8] tracking-[0.01em] text-[#333333]">श्री पद्मवैद्यम</h1>
             </div>
           </Link>
 
