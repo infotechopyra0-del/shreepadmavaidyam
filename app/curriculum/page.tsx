@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 import { BookOpen, Sparkles, Palette, Heart } from 'lucide-react';
 
 export default function CurriculumPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('सभी');
   const [isLoading] = useState(false);
   const programs: Curriculum[] = [
     {
@@ -18,7 +18,7 @@ export default function CurriculumPage() {
       shortDescription: 'हठ योग के प्राचीन अभ्यास का परिचय, जिसमें मूल आसनों और श्वास तकनीकों पर ध्यान केंद्रित किया गया है।',
       detailedDescription: 'यह कार्यक्रम हठ योग का व्यापक परिचय प्रदान करता है, जिसमें मूल आसन, प्राणायाम (श्वास व्यायाम) और ध्यान की बुनियादी तकनीकें शामिल हैं। विद्यार्थी सही मुद्रा, शक्ति और लचीलापन विकसित करना तथा जागरूकता को बढ़ाना सीखेंगे। यह शुरुआती लोगों के लिए उपयुक्त है।',
       programImage: '/images/foundationsofhathayoga.png',
-      category: 'Yoga & Meditation'
+      category: 'योग एवं ध्यान'
     },
     {
       _id: '2',
@@ -26,7 +26,7 @@ export default function CurriculumPage() {
       shortDescription: 'आध्यात्मिक कल्याण के लिए वैदिक मंत्रों और जप की शक्ति और महत्व को जानें।',
       detailedDescription: 'वेदों की पवित्र ध्वनियों में गहराई से उतरें। इस पाठ्यक्रम में विभिन्न वैदिक मंत्रों और जप का सही उच्चारण, लय और अर्थ सिखाया जाता है। प्रतिभागी इनके ऐतिहासिक संदर्भ, आध्यात्मिक लाभ और दैनिक जीवन में शांति व एकाग्रता के लिए व्यावहारिक उपयोग सीखेंगे।',
       programImage: '/images/vedicchantingandmantras.png',
-      category: 'Vedic Knowledge'
+      category: 'वैदिक ज्ञान'
     },
     {
       _id: '3',
@@ -34,7 +34,7 @@ export default function CurriculumPage() {
       shortDescription: 'कंप्यूटर प्रोग्रामिंग, एल्गोरिदम और डेटा संरचनाओं की मूल बातें सिखाने वाला पाठ्यक्रम।',
       detailedDescription: 'यह कार्यक्रम कंप्यूटर विज्ञान की मुख्य अवधारणाओं जैसे संगणनात्मक सोच, एल्गोरिदम द्वारा समस्या समाधान और बुनियादी डेटा संरचनाओं से परिचित कराता है। विद्यार्थी एक लोकप्रिय प्रोग्रामिंग भाषा के साथ व्यावहारिक अनुभव प्राप्त करेंगे और तकनीक में आगे अध्ययन के लिए आवश्यक कोडिंग कौशल विकसित करेंगे।',
       programImage: '/images/introductiontocomputerscience.png',
-      category: 'Modern Academic'
+      category: 'आधुनिक अकादमिक'
     },
     {
       _id: '4',
@@ -42,7 +42,7 @@ export default function CurriculumPage() {
       shortDescription: 'भारतीय शास्त्रीय नृत्य भरतनाट्यम के मूल चरण, मुद्राएँ और भाव सीखें।',
       detailedDescription: 'यह प्रारंभिक पाठ्यक्रम भरतनाट्यम में मजबूत नींव बनाने पर केंद्रित है। विद्यार्थी बुनियादी अदवु (चरण), हस्त मुद्राएँ (हाथ के इशारे) और अभिव्यक्ति (अभिनय) सीखेंगे। इसमें लय, सौंदर्य और इस प्राचीन नृत्य के सांस्कृतिक महत्व को समझने पर जोर दिया गया है।',
       programImage: '/images/classicalindiandance.png',
-      category: 'Arts'
+      category: 'कला'
     },
     {
       _id: '5',
@@ -50,7 +50,7 @@ export default function CurriculumPage() {
       shortDescription: 'तनाव कम करने और मानसिक स्पष्टता बढ़ाने के लिए माइंडफुलनेस की तकनीकें और अभ्यास।',
       detailedDescription: 'यह कार्यक्रम तनाव प्रबंधन, एकाग्रता सुधारने और भावनात्मक कल्याण के लिए व्यावहारिक माइंडफुलनेस मेडिटेशन तकनीकें प्रदान करता है। प्रतिभागी मार्गदर्शित ध्यान, बॉडी स्कैन अभ्यास और सचेत श्वास तकनीकें सीखेंगे, जिन्हें वे अपने दैनिक जीवन में शांति और लचीलापन बढ़ाने के लिए अपना सकते हैं।',
       programImage: '/images/mindfulnessmeditationforstressreduction.png',
-      category: 'Arts'
+      category: 'कला'
     },
     {
       _id: '6',
@@ -58,7 +58,7 @@ export default function CurriculumPage() {
       shortDescription: 'चयनित उपनिषदों का गहन अध्ययन, उनके दार्शनिक दृष्टिकोण और आध्यात्मिक शिक्षाओं की खोज।',
       detailedDescription: 'वेदों के अंतिम भाग उपनिषदों की गहन ज्ञानधारा में डूबें। इस पाठ्यक्रम में प्रमुख उपनिषदों के ग्रंथों की चर्चा की जाती है, जिसमें ब्रह्म, आत्मा, कर्म और मोक्ष जैसी मुख्य दार्शनिक अवधारणाएँ शामिल हैं। इसका उद्देश्य आत्मा, वास्तविकता और मुक्ति के मार्ग की गहरी समझ प्रदान करना है।',
       programImage: '/images/wisdomofthesages.png',
-      category: 'Vedic Knowledge'
+      category: 'वैदिक ज्ञान'
     },
     {
       _id: '7',
@@ -66,7 +66,7 @@ export default function CurriculumPage() {
       shortDescription: 'हमारे ग्रह के सामने आने वाली महत्वपूर्ण पर्यावरणीय समस्याओं का अध्ययन और सतत समाधान की खोज।',
       detailedDescription: 'यह पाठ्यक्रम जलवायु परिवर्तन, जैव विविधता की हानि, प्रदूषण और संसाधनों की कमी जैसी प्रमुख पर्यावरणीय चुनौतियों का अवलोकन प्रदान करता है। विद्यार्थी इन समस्याओं के वैज्ञानिक आधार, उनके सामाजिक प्रभाव और स्थिरता व संरक्षण के विभिन्न उपायों का विश्लेषण करेंगे।',
       programImage: '/images/globalchallenges.png',
-      category: 'Modern Academic'
+      category: 'आधुनिक अकादमिक'
     },
     {
       _id: '8',
@@ -74,21 +74,21 @@ export default function CurriculumPage() {
       shortDescription: 'भारतीय पारंपरिक मिनिएचर चित्रकला की जटिल तकनीकों और ऐतिहासिक संदर्भ को जानें।',
       detailedDescription: 'भारतीय मिनिएचर चित्रकला की सूक्ष्म कला की खोज करें। यह कार्यक्रम ऐतिहासिक विकास, विभिन्न शैलियों और पारंपरिक तकनीकों को कवर करता है, जो इन उत्कृष्ट कृतियों के निर्माण में प्रयुक्त होती हैं। विद्यार्थी प्राकृतिक रंग, ब्रशवर्क और संरचना के बारे में सीखेंगे, और शास्त्रीय शैलियों से प्रेरित अपनी खुद की मिनिएचर कृतियाँ बनाएंगे।',
       programImage: '/images/traditionalindianpainting.png',
-      category: 'Arts'
+      category: 'कला'
     },
   ];
 
-  const categories = ['All', ...Array.from(new Set(programs.map(p => p.category).filter(Boolean)))];
+  const categories = ['सभी', ...Array.from(new Set(programs.map(p => p.category).filter(Boolean)))];
   
-  const filteredPrograms = selectedCategory === 'All' 
+  const filteredPrograms = selectedCategory === 'सभी' 
     ? programs 
     : programs.filter(p => p.category === selectedCategory);
 
   const categoryIcons: Record<string, any> = {
-    'Vedic Knowledge': BookOpen,
-    'Modern Academic': Sparkles,
-    'Arts & Culture': Palette,
-    'Yoga & Meditation': Heart
+    'वैदिक ज्ञान': BookOpen,
+    'आधुनिक अकादमिक': Sparkles,
+    'कला': Palette,
+    'योग एवं ध्यान': Heart
   };
 
   const getCategoryIcon = (category?: string) => {
@@ -250,7 +250,7 @@ export default function CurriculumPage() {
                         <div className="relative overflow-hidden h-64">
                           <Image
                             src={program.programImage}
-                            alt={program.programTitle || 'Program image'}
+                            alt={program.programTitle || 'कार्यक्रम छवि'}
                             width={400}
                             height={256}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -335,7 +335,7 @@ export default function CurriculumPage() {
                     fontWeight: 400,
                   }}
                 >
-                  {selectedCategory === 'All' 
+                  {selectedCategory === 'सभी' 
                     ? 'हमारे पाठ्यक्रम कार्यक्रमों को अपडेट किया जा रहा है। कृपया शीघ्र ही पुनः देखें।'
                     : `चयनित श्रेणी (${selectedCategory}) में कोई कार्यक्रम नहीं मिला।`
                   }
@@ -358,7 +358,7 @@ export default function CurriculumPage() {
             >
               <Image
                 src="/images/studentsengagedininteractivelearning.png"
-                alt="Students engaged in interactive learning"
+                alt="इंटरैक्टिव शिक्षण में संलग्न विद्यार्थी"
                 width={500}
                 height={300}
                 className="w-full h-125 object-cover rounded-lg"
