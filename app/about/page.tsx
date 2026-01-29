@@ -95,10 +95,10 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="font-['Playfair_Display'] text-[3rem] leading-[1.1] tracking-[0.01em] font-bold md:text-[4rem] md:leading-[1.05] mb-6 text-[#333333]">
+            <h1 className="font-playfair-display text-[3rem] leading-[1.1] tracking-[0.01em] font-bold md:text-[4rem] md:leading-[1.05] mb-6 text-[#333333]">
               हमारे बारे में
             </h1>
-            <p className="font-['Open_Sans'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium md:text-[1.75rem] md:leading-[1.8] text-[#333333]/80 max-w-4xl mx-auto">
+            <p className="font-open-sans text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium md:text-[1.75rem] md:leading-[1.8] text-[#333333]/80 max-w-4xl mx-auto">
               एक पवित्र स्थान जहाँ प्राचीन ऋषि परंपरा आधुनिक उत्कृष्टता का मार्ग प्रशस्त करती है।
             </p>
           </motion.div>
@@ -129,16 +129,16 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="font-['Playfair_Display'] text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3rem] md:leading-[1.1] mb-6 text-[#333333]">
+              <h2 className="font-playfair-display text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3rem] md:leading-[1.1] mb-6 text-[#333333]">
                 हमारा दृष्टिकोण और मिशन
               </h2>
-              <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
+              <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
                 कालातीत गुरु-शिष्य परंपरा को पुनर्जीवित करने की गहरी प्रतिबद्धता के साथ स्थापित, हमारा गुरुकुल प्राचीन ज्ञान और समकालीन शिक्षा के बीच एक सेतु के रूप में खड़ा है। हम ऋषियों की पवित्र परंपरा का सम्मान करते हैं—वे प्रबुद्ध साधु जिन्होंने पीढ़ियों तक ज्ञान को संरक्षित और प्रसारित किया।
               </p>
-              <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
+              <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
                 हमारा मिशन पारंपरिक अकादमिक सीमाओं से परे है। हम एकीकृत पाठ्यक्रम के माध्यम से मन, शरीर और आत्मा—तीनों का पोषण करते हैं, जिसमें वैदिक विज्ञान, आधुनिक विषय, योग, ध्यान और कला शामिल हैं। प्रत्येक विद्यार्थी को समर्पित गुरुओं द्वारा मार्गदर्शन मिलता है, जो केवल शिक्षक नहीं, बल्कि मार्गदर्शक, आदर्श और आध्यात्मिक गुरु होते हैं।
               </p>
-              <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80">
+              <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80">
                 हमारे शांत, प्रकृति से घिरे परिसर में, विद्यार्थी धर्मिक शिक्षा की परिवर्तनकारी शक्ति का अनुभव करते हैं—वे उद्देश्य, ईमानदारी और करुणा के साथ जीना सीखते हैं, साथ ही शैक्षणिक उपलब्धियों में उत्कृष्टता प्राप्त करते हैं और आधुनिक दुनिया में नेतृत्व के लिए तैयार होते हैं।
               </p>
             </motion.div>
@@ -153,16 +153,16 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <h2 className="font-['Playfair_Display'] text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3rem] md:leading-[1.1] mb-6 text-[#333333]">
+              <h2 className="font-playfair-display text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3rem] md:leading-[1.1] mb-6 text-[#333333]">
                 गुरु-शिष्य परंपरा
               </h2>
-              <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
+              <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
                 हमारी शैक्षिक दर्शन के केंद्र में पवित्र गुरु-शिष्य परंपरा है—एक ऐसा संबंध जो पारंपरिक शिक्षक-विद्यार्थी संबंध से कहीं आगे है। गुरु केवल शिक्षक नहीं, बल्कि एक आध्यात्मिक मार्गदर्शक हैं, जो ज्ञान, बुद्धि और आत्म-साक्षात्कार का मार्ग प्रकाशित करते हैं।
               </p>
-              <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
+              <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80 mb-6">
                 यह प्राचीन परंपरा व्यक्तिगत मार्गदर्शन पर बल देती है, जहाँ प्रत्येक विद्यार्थी को उसकी अनूठी क्षमता के अनुसार ध्यान और मार्गदर्शन मिलता है, और पाठ्यपुस्तकों से परे ज्ञान का संचार होता है। गुरु विद्यार्थियों का निरीक्षण, पोषण और चरित्र निर्माण करते हैं, साथ ही सांसारिक और आध्यात्मिक दोनों प्रकार का ज्ञान प्रदान करते हैं।
               </p>
-              <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80">
+              <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/80">
                 इस पवित्र संबंध के माध्यम से, विद्यार्थी अनुशासन, विनम्रता, सम्मान और जीवन जीने की कला सीखते हैं—ये मूल्य एक सार्थक और उद्देश्यपूर्ण जीवन की नींव बनाते हैं।
               </p>
             </motion.div>
@@ -196,10 +196,10 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-              <h2 className="font-['Playfair_Display'] text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3.5rem] md:leading-[1.05] mb-6 text-[#333333]">
+              <h2 className="font-playfair-display text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3.5rem] md:leading-[1.05] mb-6 text-[#333333]">
               हमें क्या बनाता है विशेष
             </h2>
-            <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal md:text-[1.5rem] md:leading-[1.75] text-[#333333]/80 max-w-3xl mx-auto">
+            <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal md:text-[1.5rem] md:leading-[1.75] text-[#333333]/80 max-w-3xl mx-auto">
               शिक्षा के प्रति हमारा अनूठा दृष्टिकोण परंपरा और आधुनिकता का सर्वश्रेष्ठ समावेश करता है।
             </p>
           </motion.div>
@@ -239,10 +239,10 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="font-['Playfair_Display'] text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3.5rem] md:leading-[1.05] mb-6 text-[#333333]">
+            <h2 className="font-playfair-display text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3.5rem] md:leading-[1.05] mb-6 text-[#333333]">
               हमारे मूल मूल्य
             </h2>
-            <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal md:text-[1.5rem] md:leading-[1.75] text-[#333333]/80 max-w-3xl mx-auto">
+            <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal md:text-[1.5rem] md:leading-[1.75] text-[#333333]/80 max-w-3xl mx-auto">
               वे सिद्धांत जो हमारी शैक्षिक यात्रा के हर पहलू का मार्गदर्शन करते हैं।
             </p>
           </motion.div>
@@ -273,16 +273,16 @@ export default function AboutPage() {
                     {value.iconEmoji && (
                       <div className="text-4xl mb-4">{value.iconEmoji}</div>
                     )}
-                    <h3 className="font-['Playfair_Display'] text-[1.75rem] leading-[1.8] tracking-[0.01em] font-semibold text-[#333333] mb-4">
+                    <h3 className="font-playfair-display text-[1.75rem] leading-[1.8] tracking-[0.01em] font-semibold text-[#333333] mb-4">
                       {value.title}
                     </h3>
                     {value.shortDescription && (
-                      <p className="font-['Open_Sans'] text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#333333]/70 mb-4">
+                      <p className="font-open-sans text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#333333]/70 mb-4">
                         {value.shortDescription}
                       </p>
                     )}
                     {value.detailedDescription && (
-                      <p className="font-['Open_Sans'] text-[1rem] leading-[1.5] tracking-[0.01em] font-normal text-[#333333]/60">
+                      <p className="font-open-sans text-[1rem] leading-normal tracking-[0.01em] font-normal text-[#333333]/60">
                         {value.detailedDescription}
                       </p>
                     )}
@@ -291,7 +291,7 @@ export default function AboutPage() {
               </div>
             ) : (
               <div className="text-center py-16">
-                <p className="font-['Open_Sans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/60">
+                <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal text-[#333333]/60">
                   हमारे मूल्यों को अपडेट किया जा रहा है। कृपया शीघ्र ही पुनः देखें।
                 </p>
               </div>
