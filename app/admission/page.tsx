@@ -18,6 +18,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { format } from 'date-fns';
+import { hi } from 'date-fns/locale';
 
 export default function AdmissionPage() {
   const MOCK_FAQS: AdmissionFAQs[] = [
@@ -77,7 +78,7 @@ export default function AdmissionPage() {
       eventDate: new Date().toISOString(),
       description: 'ऑनलाइन आवेदन पोर्टल खुलता है।',
       isDeadline: false,
-      category: 'Application',
+      category: 'आवेदन',
     },
     {
       _id: 'date-2',
@@ -85,7 +86,7 @@ export default function AdmissionPage() {
       eventDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString(),
       description: 'आवेदन जमा करने की अंतिम तिथि।',
       isDeadline: true,
-      category: 'Deadline',
+      category: 'अंतिम तिथि',
     },
   ];
 
@@ -364,7 +365,7 @@ export default function AdmissionPage() {
                       <Calendar className={`w-6 h-6 ${date.isDeadline ? 'text-[#FF9933]' : 'text-[#DAA520]'}`} />
                       {date.eventDate && (
                         <p className="font-['Open_Sans'] text-[1rem] leading-normal tracking-[0.01em] font-normal text-[#333333]/60">
-                          {format(new Date(date.eventDate), 'MMMM dd, yyyy')}
+                          {format(new Date(date.eventDate), 'd MMMM yyyy', { locale: hi })}
                         </p>
                       )}
                     </div>
