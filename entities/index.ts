@@ -1,4 +1,4 @@
- interface AdmissionFAQs {
+export interface AdmissionFAQs {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;

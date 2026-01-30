@@ -60,9 +60,9 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link href="/admission">
+            <Link href="/login">
               <Button className="bg-[#FF9933] text-[#FFFFFF] hover:bg-[#FF9933]/90 px-6 py-5 font-semibold rounded-lg">
-                अभी आवेदन करें
+                लॉग इन
               </Button>
             </Link>
           </div>

@@ -242,7 +242,7 @@ export default function AboutPage() {
             <h2 className="font-playfair-display text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3.5rem] md:leading-[1.05] mb-6 text-[#333333]">
               हमारे मूल मूल्य
             </h2>
-            <p className="font-open-sans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal md:text-[1.5rem] md:leading-[1.75] text-[#333333]/80 max-w-3xl mx-auto">
+            <p className="font-opensans text-[1.25rem] leading-[1.7] tracking-[0.01em] font-normal md:text-[1.5rem] md:leading-[1.75] text-[#333333]/80 max-w-3xl mx-auto">
               वे सिद्धांत जो हमारी शैक्षिक यात्रा के हर पहलू का मार्गदर्शन करते हैं।
             </p>
           </motion.div>
