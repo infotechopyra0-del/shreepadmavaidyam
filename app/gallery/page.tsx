@@ -34,6 +34,20 @@ export default function GalleryPage() {
       category: 'समारोह',
       altText: 'मंच पर टोपी और गाउन में स्नातक 2023 समारोही समारोह में जश्न मनाते हुए।',
     },
+    {
+      _id: '4',
+      title: 'शरद ऋतु में कैंपस ग्रीन',
+      mediaImage: '/images/campusgreeninautumn.png',
+      category: 'कैंपस जीवन',
+      altText: 'मुख्य कैंपस ग्रीन पर जीवंत पतझड़ के पत्ते और वहां से गुजरते छात्र।',
+    },
+    {
+      _id: '5',
+      title: 'Robotics Club Competition',
+      mediaImage: '/images/roboticsclubcompetition.png',
+      category: 'Academic',
+      altText: 'Students presenting their custom-built robots at an inter-university robotics competition.',
+    },
   ];
 
   const [galleryItems, setGalleryItems] = useState<Gallery[]>(MOCK_GALLERY);
