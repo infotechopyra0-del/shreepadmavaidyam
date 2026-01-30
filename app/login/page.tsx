@@ -84,7 +84,7 @@ export default function LoginPage() {
                   />
                 </div>
               </div>
-
+              
               {/* Password Field */}
               <div className="space-y-2">
                 <label className="text-[1rem] leading-normal tracking-[0.01em] font-medium text-[#333333]">
