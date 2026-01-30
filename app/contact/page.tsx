@@ -69,9 +69,9 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'हमें कॉल करें',
-      content: '+91 123 456 7890',
+      content: '+91 9839854302',
       action: 'अब कॉल करें',
-      link: 'tel:+911234567890'
+      link: 'tel:+919839854302'
     },
     {
       icon: Mail,

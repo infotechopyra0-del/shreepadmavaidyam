@@ -91,16 +91,16 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+919839854302"
                   className="font-open-sans text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#FFFFFF]/80 hover:text-[#FF9933] transition-colors"
                 >
-                  +91 123 456 7890
+                  +91 983 985 4302
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 <a
-                  href="mailto:info@gurukul.edu"
+                  href="mailto:info@shreepadmavaidyam.com"
                   className="font-open-sans text-[1.125rem] leading-[1.6] tracking-[0.01em] font-normal text-[#FFFFFF]/80 hover:text-[#FF9933] transition-colors"
                 >
                   info@shreepadmavaidyam.com
