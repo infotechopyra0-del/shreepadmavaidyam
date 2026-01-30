@@ -43,10 +43,17 @@ export default function GalleryPage() {
     },
     {
       _id: '5',
-      title: 'Robotics Club Competition',
+      title: 'रोबोटिक्स क्लब प्रतियोगिता',
       mediaImage: '/images/roboticsclubcompetition.png',
-      category: 'Academic',
-      altText: 'Students presenting their custom-built robots at an inter-university robotics competition.',
+      category: 'शैक्षिक',
+      altText: 'अंतर-विश्वविद्यालय रोबोटिक्स प्रतियोगिता में अपने स्वयं निर्मित रोबोट प्रस्तुत करते छात्र।',
+    },
+    {
+      _id: '6',
+      title: 'विश्वविद्यालय खेल मैदान',
+      mediaImage: '/images/universitysportsfield.png',
+      category: 'खेल',
+      altText: 'साफ आकाश के नीचे विश्वविद्यालय के बहुउद्देश्यीय खेल मैदान का हवाई दृश्य।',
     },
   ];
 
