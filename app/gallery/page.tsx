@@ -194,7 +194,7 @@ export default function GalleryPage() {
                       {item.mediaImage && (
                         <Image
                           src={item.mediaImage}
-                          alt={item.altText || item.title || 'Gallery image'}
+                          alt={item.altText || item.title || 'गैलरी छवि'}
                           width={800}
                           height={800}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -252,7 +252,7 @@ export default function GalleryPage() {
                       className="w-full h-full"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                      title={selectedItem.title || 'Video'}
+                      title={selectedItem.title || 'वीडियो'}
                     />
                   ) : (
                     <video
