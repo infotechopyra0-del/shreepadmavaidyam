@@ -305,7 +305,7 @@ export default function GalleryPage() {
             >
                 <h2 className="font-['Playfair_Display'] text-[2.5rem] leading-[1.15] tracking-[0.01em] font-bold md:text-[3rem] md:leading-[1.1] text-[#333333] mb-6">
                   हमारे गुरुकुल का जीवन
-                </h2>
+                </h2> 
                 <p className="font-['Open_Sans'] text-[1.25rem] tracking-[0.01em] font-normal text-[#333333]/80 mb-6 leading-relaxed">
                   हमारा कैंपस सीखने, विकास और उत्सव से भरा एक जीवंत ताना-बाना है। शांत सुबह की योग सत्रों
                   से लेकर जोशपूर्ण सांस्कृतिक प्रस्तुतियों तक — हर दिन छात्रों के लिए खोजने, सृजन करने,
