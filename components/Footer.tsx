@@ -135,7 +135,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="font-open-sans text-[1rem] leading-normal tracking-[0.01em] font-normal text-[#FFFFFF]/70 text-center md:text-right">
-              © {new Date().getFullYear()} गुरुकुल। सर्वाधिकार सुरक्षित। | उत्कृष्टता के साथ वेबसाइट डिजाइन की गई
+              © {new Date().getFullYear()} श्री पद्मवैद्यम । सर्वाधिकार सुरक्षित। | उत्कृष्टता के साथ वेबसाइट डिजाइन की गई
             </p>
           </div>
         </div>

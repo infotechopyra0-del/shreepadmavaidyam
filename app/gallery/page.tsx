@@ -330,7 +330,7 @@ export default function GalleryPage() {
             >
               <Image
                 src="/images/studentsparticipatinginculturalactivities.png"
-                alt="Students participating in cultural activities"
+                alt="सांस्कृतिक गतिविधियों में भाग लेते छात्र"
                 width={896}
                 height={448}
                 className="w-full h-125 object-cover rounded-lg"
