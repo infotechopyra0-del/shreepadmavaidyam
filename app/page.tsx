@@ -480,7 +480,7 @@ export default function HomePage() {
                   </Link>
                     <div className="flex items-center gap-4 text-[#FFFFFF]/50 mt-4">
                     <Phone className="w-5 h-5" />
-                    <span>प्रवेश हेल्पलाइन: +91 98765 43210</span>
+                    <span>प्रवेश हेल्पलाइन: +91 98398 54302</span>
                   </div>
                 </div>
               </motion.div>
@@ -626,8 +626,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium mb-2">हमें कॉल करें</h3>
-                    <p className="text-[#333333]/70">+91 98765 43210</p>
-                    <p className="text-[#333333]/70">+91 12345 67890</p>
+                    <p className="text-[#333333]/70">+91 98398 54302</p>
                   </div>
                 </div>
               </div>

@@ -89,7 +89,7 @@ export default function ContactPage() {
     }
   ];
 
-  const whatsappNumber = '+911234567890';
+  const whatsappNumber = '+919839854302';
 
   return (
     <div className="min-h-screen bg-[#F5E6D3]">
