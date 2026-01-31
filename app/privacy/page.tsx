@@ -198,7 +198,6 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-[#F5E6D3] text-[#333333] font-['opensans']">
       <Header />
-
       {/* Hero Section */}
       <section className="relative w-full pt-32 pb-20 px-6 md:px-12 lg:px-24 bg-linear-to-b from-[#333333] to-[#4A4A4A] text-[#F5E6D3] overflow-hidden">
         <div className="absolute inset-0 opacity-5">

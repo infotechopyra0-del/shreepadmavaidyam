@@ -631,7 +631,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            
             <div className="bg-[#F5E6D3] p-8 md:p-12 rounded-3xl border border-[#DAA520]/10">
               <h3 className="font-['playfairdisplay'] text-[1.75rem] leading-[1.8] tracking-[0.01em] font-semibold mb-6">जानकारी अनुरोध करें</h3>
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
