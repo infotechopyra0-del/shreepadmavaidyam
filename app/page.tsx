@@ -232,17 +232,30 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
             className="flex flex-col items-center"
           >
-
               <div className="mb-6 flex items-center gap-4 opacity-80">
                 <div className="h-px w-12 bg-[#FFFFFF]/60" />
                 <span className="text-[#FFFFFF]/90 uppercase text-[1rem] leading-normal tracking-[0.01em] font-normal">स्थापित 1998</span>
                 <div className="h-px w-12 bg-[#FFFFFF]/60" />
               </div>
-            
-              <h1 className="font-['playfairdisplay'] text-[3rem] leading-[1.1] tracking-tight font-bold md:text-[4rem] md:leading-[1.05] lg:text-[6rem] lg:leading-none text-[#FFFFFF] mb-8  drop-shadow-lg">
+              {/* School Name */}
+              <div className="text-center mb-8">
+                <h1 className="font-['playfairdisplay'] text-[2.5rem] leading-[1.1] tracking-tight font-bold md:text-[3.5rem] md:leading-[1.05] lg:text-[5rem] lg:leading-none text-[#FFFFFF] mb-4 drop-shadow-lg">
+                  श्री पद्मावती गुरुकुल
+                </h1>
+                {/* Affiliation Details */}
+                <div className="bg-[#FFFFFF]/10 backdrop-blur-sm border border-[#FFFFFF]/20 rounded-xl px-6 py-4 mb-6 max-w-4xl mx-auto">
+                  <p className="text-[#FFFFFF]/95 text-[1rem] md:text-[1.125rem] leading-relaxed font-medium mb-2">
+                    उत्तर प्रदेश माध्यमिक शिक्षा परिषद् से मान्यता प्राप्त | CBSE संबद्ध (कक्षा 1-12)
+                  </p>
+                  <p className="text-[#FFFFFF]/85 text-[0.875rem] md:text-[1rem] leading-relaxed">
+                    राष्ट्रीय शिक्षा नीति 2020 के अनुसार | ISO 9001:2015 प्रमाणित संस्थान
+                  </p>
+                </div>
+              </div>
+              <h2 className="font-['playfairdisplay'] text-[2.5rem] leading-[1.1] tracking-tight font-bold md:text-[3rem] md:leading-[1.05] lg:text-[4rem] lg:leading-none text-[#FFFFFF] mb-8 drop-shadow-lg">
                 परंपरा और <br />
                 <span className="text-[#FF9933] italic">आधुनिकता</span>
-              </h1>
+              </h2>
             
               <p className="font-['opensans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] md:text-[1.75rem] md:leading-[1.8] md:font-semibold text-[#FFFFFF]/90 mb-12 max-w-3xl font-normal">
                 शाश्वत वैदिक ज्ञान और समकालीन शिक्षा के माध्यम से समग्र विकास का पोषण।

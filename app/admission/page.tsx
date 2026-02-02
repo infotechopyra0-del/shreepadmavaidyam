@@ -96,6 +96,7 @@ export default function AdmissionPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [formData, setFormData] = useState({
+    // Basic Student Info
     studentName: '',
     parentName: '',
     email: '',
@@ -103,13 +104,62 @@ export default function AdmissionPage() {
     grade: '',
     address: '',
     message: '',
+    
+    // Class Information
+    passedClass: '',
+    entryClass: '',
+    
+    // Student Information (Hindi & English)
+    studentNameHindi: '',
+    studentNameEnglish: '',
+    applicationDate: '',
+    dateOfBirth: '',
+    
+    // Parent Information (Hindi & English)
+    fatherNameHindi: '',
+    fatherNameEnglish: '',
+    motherNameHindi: '',
+    motherNameEnglish: '',
+    
+    // Contact & Personal Info
+    fatherOccupation: '',
+    nationality: '',
+    state: '',
+    
+    // Guardian Information
+    guardianRelationship: '',
+    socialWorkerDetails: '',
+    guardianDetails: '',
+    
+    // Additional Information
+    infoMedium: '',
+    admissionPurpose: '',
+    
+    // Document Numbers
+    studentAadharNumber: '',
+    fatherAadharNumber: '',
+    motherAadharNumber: '',
+    
+    // Terms and Conditions
+    agreeTerms: false,
+    agreePrivacy: false,
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData({
+        ...formData,
+        [name]: checked,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -125,6 +175,7 @@ export default function AdmissionPage() {
       });
 
       setFormData({
+        // Basic Student Info
         studentName: '',
         parentName: '',
         email: '',
@@ -132,6 +183,29 @@ export default function AdmissionPage() {
         grade: '',
         address: '',
         message: '',
+        passedClass: '',
+        entryClass: '',
+        studentNameHindi: '',
+        studentNameEnglish: '',
+        applicationDate: '',
+        dateOfBirth: '',
+        fatherNameHindi: '',
+        fatherNameEnglish: '',
+        motherNameHindi: '',
+        motherNameEnglish: '',
+        fatherOccupation: '',
+        nationality: '',
+        state: '',
+        guardianRelationship: '',
+        socialWorkerDetails: '',
+        guardianDetails: '',
+        infoMedium: '',
+        admissionPurpose: '',
+        studentAadharNumber: '',
+        fatherAadharNumber: '',
+        motherAadharNumber: '',
+        agreeTerms: false,
+        agreePrivacy: false,
       });
     } catch (error) {
       toast.error('सबमिशन विफल', {
@@ -692,110 +766,533 @@ export default function AdmissionPage() {
             </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="studentName" className="font-paragraph text-base text-[#333333] mb-2 block">
-                    छात्र का नाम *
-                  </Label>
-                  <Input
-                    id="studentName"
-                    name="studentName"
-                    value={formData.studentName}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
+          <div className="max-w-4xl mx-auto">
+            <form onSubmit={handleSubmit} className="space-y-8">
+              {/* Class Information */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">कक्षा संबंधी जानकारी</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="passedClass" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      उत्तीर्ण कक्षा / Passed Class *
+                    </Label>
+                    <select
+                      id="passedClass"
+                      name="passedClass"
+                      value={formData.passedClass}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full p-3 rounded-lg bg-[#FFFFFF] border border-[#DAA520]/20 focus:border-[#FF9933] outline-none transition-colors font-paragraph"
+                    >
+                      <option value="">Select...</option>
+                      <option value="3rd">3rd</option>
+                      <option value="4th">4th</option>
+                      <option value="5th">5th</option>
+                      <option value="6th">6th</option>
+                    </select>
+                  </div>
+                  <div>
+                    <Label htmlFor="entryClass" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      प्रवेश कक्षा / Entry Class *
+                    </Label>
+                    <select
+                      id="entryClass"
+                      name="entryClass"
+                      value={formData.entryClass}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full p-3 rounded-lg bg-[#FFFFFF] border border-[#DAA520]/20 focus:border-[#FF9933] outline-none transition-colors font-paragraph"
+                    >
+                      <option value="">Select...</option>
+                      <option value="4th">4th</option>
+                      <option value="5th">5th</option>
+                      <option value="6th">6th</option>
+                      <option value="7th">7th</option>
+                    </select>
+                  </div>
                 </div>
-                <div>
-                  <Label htmlFor="parentName" className="font-paragraph text-base text-[#333333] mb-2 block">
-                    अभिभावक / संरक्षक का नाम *
+              </div>
+
+              {/* Student Information */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">छात्र की जानकारी</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="studentNameHindi" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा-नाम *
+                    </Label>
+                    <Input
+                      id="studentNameHindi"
+                      name="studentNameHindi"
+                      value={formData.studentNameHindi}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="studentNameEnglish" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      Student Name *
+                    </Label>
+                    <Input
+                      id="studentNameEnglish"
+                      name="studentNameEnglish"
+                      value={formData.studentNameEnglish}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                  <div>
+                    <Label htmlFor="applicationDate" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      आवेदन तिथि / Application Date *
+                    </Label>
+                    <Input
+                      id="applicationDate"
+                      name="applicationDate"
+                      type="date"
+                      value={formData.applicationDate}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="dateOfBirth" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      जन्मतिथि / Date of Birth *
+                    </Label>
+                    <Input
+                      id="dateOfBirth"
+                      name="dateOfBirth"
+                      type="date"
+                      value={formData.dateOfBirth}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Parents Information */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">माता-पिता की जानकारी</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="fatherNameHindi" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      पितृनाम *
+                    </Label>
+                    <Input
+                      id="fatherNameHindi"
+                      name="fatherNameHindi"
+                      value={formData.fatherNameHindi}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="fatherNameEnglish" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      Father Name *
+                    </Label>
+                    <Input
+                      id="fatherNameEnglish"
+                      name="fatherNameEnglish"
+                      value={formData.fatherNameEnglish}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                  <div>
+                    <Label htmlFor="motherNameHindi" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      मातृनाम *
+                    </Label>
+                    <Input
+                      id="motherNameHindi"
+                      name="motherNameHindi"
+                      value={formData.motherNameHindi}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="motherNameEnglish" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      Mother Name *
+                    </Label>
+                    <Input
+                      id="motherNameEnglish"
+                      name="motherNameEnglish"
+                      value={formData.motherNameEnglish}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact & Personal Information */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">संपर्क जानकारी</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="phone" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      Phone Number/मोबाइल नंबर *
+                    </Label>
+                    <div className="flex">
+                      <span className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-[#DAA520]/20 bg-[#FFFFFF] text-sm">
+                        +91
+                      </span>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="font-paragraph rounded-l-none bg-[#FFFFFF]"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <Label htmlFor="fatherOccupation" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      पिता का व्यवसाय / Father's Occupation *
+                    </Label>
+                    <Input
+                      id="fatherOccupation"
+                      name="fatherOccupation"
+                      value={formData.fatherOccupation}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                  <div>
+                    <Label htmlFor="nationality" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      राष्ट्रीयता / Nationality *
+                    </Label>
+                    <Input
+                      id="nationality"
+                      name="nationality"
+                      value={formData.nationality}
+                      onChange={handleInputChange}
+                      required
+                      placeholder="भारतीय"
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="state" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      राज्य/ State *
+                    </Label>
+                    <Input
+                      id="state"
+                      name="state"
+                      value={formData.state}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+
+                <div className="mt-6">
+                  <Label htmlFor="address" className="font-paragraph text-base text-[#333333] mb-2 block">
+                    पता / Address *
                   </Label>
-                  <Input
-                    id="parentName"
-                    name="parentName"
-                    value={formData.parentName}
+                  <Textarea
+                    id="address"
+                    name="address"
+                    value={formData.address}
                     onChange={handleInputChange}
                     required
-                    className="font-paragraph"
+                    rows={3}
+                    className="font-paragraph bg-[#FFFFFF]"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="email" className="font-paragraph text-base text-[#333333] mb-2 block">
-                    ईमेल पता *
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
+              {/* Guardian Information */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">संरक्षक की जानकारी</h3>
+                <div className="grid grid-cols-1 gap-6">
+                  <div>
+                    <Label htmlFor="guardianRelationship" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      यदि माता-पिता नहीं हों तो संरक्षक का छात्र के साथ संबंध।/ Relationship With Student *
+                    </Label>
+                    <Input
+                      id="guardianRelationship"
+                      name="guardianRelationship"
+                      value={formData.guardianRelationship}
+                      onChange={handleInputChange}
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="socialWorkerDetails" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      यदि माता-पिता सामाजिक कार्यकर्ता हैं तो किस क्षेत्र में विवरण दीजिए / If parents are social workers then give details in which field *
+                    </Label>
+                    <Textarea
+                      id="socialWorkerDetails"
+                      name="socialWorkerDetails"
+                      value={formData.socialWorkerDetails}
+                      onChange={handleInputChange}
+                      rows={3}
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="guardianDetails" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा के संरक्षक या अभिभावक कौन कौन हैं? कोई चार नाम व उनका विवरण (नाम , व्यवसाय, छात्रा के साथ संबंध)/ Who are the guardian or guardians of the student? *
+                    </Label>
+                    <Textarea
+                      id="guardianDetails"
+                      name="guardianDetails"
+                      value={formData.guardianDetails}
+                      onChange={handleInputChange}
+                      required
+                      rows={4}
+                      placeholder="1. नाम: ___, व्यवसाय: ___, संबंध: ___
+2. नाम: ___, व्यवसाय: ___, संबंध: ___
+3. नाम: ___, व्यवसाय: ___, संबंध: ___
+4. नाम: ___, व्यवसाय: ___, संबंध: ___"
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <Label htmlFor="phone" className="font-paragraph text-base text-[#333333] mb-2 block">
-                    फ़ोन नंबर *
-                  </Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
+              </div>
+
+              {/* Additional Information */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">अतिरिक्त जानकारी</h3>
+                <div className="grid grid-cols-1 gap-6">
+                  <div>
+                    <Label htmlFor="infoMedium" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      गुरुकुल की जानकारी का माध्यम / Medium of information about Gurukul *
+                    </Label>
+                    <Input
+                      id="infoMedium"
+                      name="infoMedium"
+                      value={formData.infoMedium}
+                      onChange={handleInputChange}
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="admissionPurpose" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      गुरुकुल में प्रवेश का उद्देश्य / Purpose of admission to Gurukul (कोई पाँच / Any five) *
+                    </Label>
+                    <Textarea
+                      id="admissionPurpose"
+                      name="admissionPurpose"
+                      value={formData.admissionPurpose}
+                      onChange={handleInputChange}
+                      required
+                      rows={4}
+                      placeholder="कृपया गुरुकुल में प्रवेश के पांच उद्देश्य लिखें..."
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <Label htmlFor="grade" className="font-paragraph text-base text-[#333333] mb-2 block">
-                  जिस कक्षा के लिए आवेदन कर रहे हैं *
-                </Label>
-                <Input
-                  id="grade"
-                  name="grade"
-                  value={formData.grade}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="उदाहरण: कक्षा 5"
-                  className="font-paragraph"
-                />
+              {/* Document Uploads */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">दस्तावेज़ अपलोड</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="studentPhoto" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा पासपोर्ट फोटो अपलोड करें (नवीनतम) / Upload Student Passport Photo (Latest) *
+                    </Label>
+                    <Input
+                      id="studentPhoto"
+                      name="studentPhoto"
+                      type="file"
+                      accept="image/*"
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="studentAadharNumber" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा आधार कार्ड नंबर दर्ज करें / Enter Student Aadhar Card Number *
+                    </Label>
+                    <Input
+                      id="studentAadharNumber"
+                      name="studentAadharNumber"
+                      value={formData.studentAadharNumber}
+                      onChange={handleInputChange}
+                      required
+                      placeholder="1234 5678 9012"
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                  <div>
+                    <Label htmlFor="studentAadharPhoto" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा आधार कार्ड फोटो अपलोड करें / Upload Student Aadhar Card Photo *
+                    </Label>
+                    <Input
+                      id="studentAadharPhoto"
+                      name="studentAadharPhoto"
+                      type="file"
+                      accept="image/*"
+                      required
+                      className="font-paragraph bg-[#FFFFFF]  "
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="fatherAadharNumber" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा के पिता या अभिभावक का आधार कार्ड नंबर दर्ज करें / Enter Student Father or Guardian Aadhar Card Number *
+                    </Label>
+                    <Input
+                      id="fatherAadharNumber"
+                      name="fatherAadharNumber"
+                      value={formData.fatherAadharNumber}
+                      onChange={handleInputChange}
+                      required
+                      placeholder="1234 5678 9012"
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                  <div>
+                    <Label htmlFor="fatherAadharPhoto" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा के पिता या अभिभावक का आधार कार्ड फोटो अपलोड करें / Upload Father or guardian Aadhar Card photo *
+                    </Label>
+                    <Input
+                      id="fatherAadharPhoto"
+                      name="fatherAadharPhoto"
+                      type="file"
+                      accept="image/*"
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="motherAadharNumber" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा के माता या अभिभावक का आधार कार्ड नंबर दर्ज करें / Enter Student Mother or Guardian Aadhar Card Number *
+                    </Label>
+                    <Input
+                      id="motherAadharNumber"
+                      name="motherAadharNumber"
+                      value={formData.motherAadharNumber}
+                      onChange={handleInputChange}
+                      required
+                      placeholder="1234 5678 9012"
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                  <div>
+                    <Label htmlFor="motherAadharPhoto" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      छात्रा के माता या अभिभावक का आधार कार्ड फोटो अपलोड करें / Upload Mother or guardian Aadhar Card photo *
+                    </Label>
+                    <Input
+                      id="motherAadharPhoto"
+                      name="motherAadharPhoto"
+                      type="file"
+                      accept="image/*"
+                      required
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="previousMarksList" className="font-paragraph text-base text-[#333333] mb-2 block">
+                      पिछली कक्षा की अंक सूची अपलोड करें (अगर हो तो ) / Upload previous class marks list (if available)
+                    </Label>
+                    <Input
+                      id="previousMarksList"
+                      name="previousMarksList"
+                      type="file"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      className="font-paragraph bg-[#FFFFFF]"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <Label htmlFor="address" className="font-paragraph text-base text-[#333333] mb-2 block">
-                  निवास पता *
-                </Label>
-                <Input
-                  id="address"
-                  name="address"
-                  value={formData.address}
-                  onChange={handleInputChange}
-                  required
-                  className="font-paragraph"
-                />
+              {/* Examination Fee */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">परीक्षा शुल्क</h3>
+                <div>
+                  <Label className="font-paragraph text-base text-[#333333] mb-2 block">
+                    परीक्षा-शुल्क/ Examination fee *
+                  </Label>
+                  <div className="text-2xl font-semibold text-[#FF9933] mb-2">₹1000</div>
+                  <p className="text-sm text-[#333333]/70">
+                    <strong>नोट:</strong><br />
+                    1. बिना फॉर्म के entrance exam में एंट्री नहीं है<br />
+                    2. Terms & Conditions में दिए गए लिंक का संदर्भ लें ताकि आप वर्ष 2024–25 का Prospectus देख सकें।
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <Label htmlFor="message" className="font-paragraph text-base text-[#333333] mb-2 block">
-                  अतिरिक्त जानकारी
-                </Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={5}
-                  placeholder="अपने बच्चे की रुचियों, विशेष आवश्यकताओं, या किसी भी प्रश्न के बारे में बताएं..."
-                  className="font-paragraph"
-                />
+              {/* Terms and Conditions */}
+              <div className="bg-[#F5E6D3] p-6 rounded-lg border border-[#DAA520]/20">
+                <h3 className="font-['playfairdisplay'] text-[1.5rem] leading-[1.75] tracking-[0.01em] font-medium text-[#333333] mb-4">नियम और शर्तें</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <input
+                      type="checkbox"
+                      id="agreeTerms"
+                      name="agreeTerms"
+                      checked={formData.agreeTerms}
+                      onChange={handleInputChange}
+                      required
+                      className="h-4 w-4 text-[#FF9933] focus:ring-[#FF9933] border-gray-300 rounded"
+                    />
+                    <Label htmlFor="agreeTerms" className="font-paragraphtext-base text-[#333333]">
+                      I agree with term and conditions *
+                    </Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <input
+                      type="checkbox"
+                      id="agreePrivacy"
+                      name="agreePrivacy"
+                      checked={formData.agreePrivacy}
+                      onChange={handleInputChange}
+                      required
+                      className="h-4 w-4 text-[#FF9933] focus:ring-[#FF9933] border-gray-300 rounded"
+                    />
+                    <Label htmlFor="agreePrivacy" className="font-paragraph text-base text-[#333333]">
+                      I agree to the Privacy Policy and Terms & Conditions *
+                    </Label>
+                  </div>
+
+                  <div className="mt-4">
+                    <a href="#" className="text-[#FF9933] hover:text-[#FF9933]/80 font-medium underline">
+                      Prospectus PDF डाउनलोड करें
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <Button
