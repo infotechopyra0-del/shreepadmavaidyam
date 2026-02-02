@@ -184,14 +184,6 @@ const ParallaxText = ({ children, className }: { children: React.ReactNode; clas
 };
 
 export default function HomePage() {
-  const handleBrochureDownload = () => {
-    const link = document.createElement('a');
-    link.href = '#';
-    link.download = 'gurukul-admission-brochure.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
   const { scrollYProgress } = useScroll();
   const textureOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 0.05]);
   return (
@@ -240,45 +232,21 @@ export default function HomePage() {
               {/* School Name */}
               <div className="text-center mb-8">
                 <h1 className="font-['playfairdisplay'] text-[2.5rem] leading-[1.1] tracking-tight font-bold md:text-[3.5rem] md:leading-[1.05] lg:text-[5rem] lg:leading-none text-[#FFFFFF] mb-4 drop-shadow-lg">
-                  श्री पद्मावती गुरुकुल
+                  श्री पद्मवेधाम तीर्थ वेद विद्यालय
                 </h1>
                 {/* Affiliation Details */}
                 <div className="bg-[#FFFFFF]/10 backdrop-blur-sm border border-[#FFFFFF]/20 rounded-xl px-6 py-4 mb-6 max-w-4xl mx-auto">
                   <p className="text-[#FFFFFF]/95 text-[1rem] md:text-[1.125rem] leading-relaxed font-medium mb-2">
-                    उत्तर प्रदेश माध्यमिक शिक्षा परिषद् से मान्यता प्राप्त | CBSE संबद्ध (कक्षा 1-12)
+                    महर्षि सान्दीपनि राष्ट्रीय वेदविद्या प्रतिष्ठान, उज्जैन
+                  </p>
+                  <p className="text-[#FFFFFF]/90 text-[0.875rem] md:text-[1rem] leading-relaxed mb-2">
+                    महर्षि सान्दीपनि राष्ट्रीय वेद संस्कृत शिक्षा बोर्ड से मान्यता प्राप्त
                   </p>
                   <p className="text-[#FFFFFF]/85 text-[0.875rem] md:text-[1rem] leading-relaxed">
-                    राष्ट्रीय शिक्षा नीति 2020 के अनुसार | ISO 9001:2015 प्रमाणित संस्थान
+                    ग्राम – गुरैली, पोस्ट – छपियां, जिला – गोरखपुर – 273016
                   </p>
                 </div>
               </div>
-              <h2 className="font-['playfairdisplay'] text-[2.5rem] leading-[1.1] tracking-tight font-bold md:text-[3rem] md:leading-[1.05] lg:text-[4rem] lg:leading-none text-[#FFFFFF] mb-8 drop-shadow-lg">
-                परंपरा और <br />
-                <span className="text-[#FF9933] italic">आधुनिकता</span>
-              </h2>
-            
-              <p className="font-['opensans'] text-[1.25rem] leading-[1.7] tracking-[0.01em] md:text-[1.75rem] md:leading-[1.8] md:font-semibold text-[#FFFFFF]/90 mb-12 max-w-3xl font-normal">
-                शाश्वत वैदिक ज्ञान और समकालीन शिक्षा के माध्यम से समग्र विकास का पोषण।
-              </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 w-full justify-center">
-              <Button
-                onClick={handleBrochureDownload}
-                className="bg-[#FF9933] hover:bg-[#FF9933]/90 text-[#FFFFFF] px-10 py-7 text-[1.25rem] leading-[1.7] tracking-[0.01em] rounded-full transition-all duration-300 shadow-lg hover:shadow-[#FF9933]/25 hover:-translate-y-1"
-              >
-                <Download className="mr-3 h-5 w-5" />
-                ब्रोशर डाउनलोड करें
-              </Button>
-              <Link href="/admission">
-                <Button
-                  variant="outline"
-                    className="bg-[#FFFFFF]/10 backdrop-blur-sm border-[#FFFFFF]/30 text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#333333] px-10 py-7 text-[1.25rem] leading-[1.7] tracking-[0.01em] rounded-full transition-all duration-300"
-                >
-                  अभी आवेदन करें
-                  <ArrowRight className="ml-3 h-5 w-5" />
-                </Button>
-              </Link>
-            </div>
           </motion.div>
         </div>
 
@@ -354,6 +322,7 @@ export default function HomePage() {
         </div>
       </section>
       <SectionDivider />
+
       {/* --- CURRICULUM (Horizontal Scroll) --- */}
       <section className="w-full py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-16 text-center">
